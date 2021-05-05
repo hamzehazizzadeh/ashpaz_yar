@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "آشپزیار",
+    "slug": "AshpazYar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/image/icon.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/image/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.hamzehazizzadeh.AshpazYar"
+    },
+    "web": {
+      "favicon": "./src/assets/image/icon.png"
+    }
+  }
+}
