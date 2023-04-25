@@ -1,32 +1,69 @@
-import Toast from "react-native-tiny-toast";
-import { RFPercentage } from "react-native-responsive-fontsize";
+import Toast, {BaseToast} from 'react-native-toast-message';
 
-import { defaultFontFamily } from "../fontFamilyUtils/fontFamilyUtils";
+import {global_font} from '../../assets/styles/style';
 
-const toastOptions = {
-  position: Toast.position.CENTER,
-  textStyle: {
-    fontFamily: defaultFontFamily,
-    fontSize: RFPercentage(1.5),
-  },
-  shadow: true,
-};
-
-export const successToast = (message) => {
-  return Toast.showSuccess(message, toastOptions);
-};
-
-export const loadingToast = (message = "لطفا کمی صبر کنید ...") => {
-  return Toast.showLoading(message, toastOptions);
-};
-
-export const customToast = (message) => {
-  return Toast.show(message, {
-    ...toastOptions,
-    position: Toast.position.CENTER,
+export const toastSuccessMessage = (title, message) => {
+  Toast.show({
+    type: 'success',
+    text1: title,
+    text2: message,
   });
 };
 
-export const hideToast = () => {
-  return Toast.hide();
+export const toastErrorMessage = (title, message) => {
+  Toast.show({
+    type: 'error',
+    text1: title,
+    text2: message,
+  });
 };
+
+export const toastInfoMessage = (title, message) => {
+  Toast.show({
+    type: 'info',
+    text1: title,
+    text2: message,
+  });
+};
+
+export const toastMessageBorderColor = type => {
+  switch (type) {
+    case 'success':
+      return 'green';
+    case 'error':
+      return 'red';
+    case 'info':
+      return 'blue';
+
+    default:
+      return 'gray';
+  }
+};
+
+//* Start React Native Toast
+const baseToast = ({...rest}) => (
+  <BaseToast
+    {...rest}
+    style={{
+      borderLeftColor: toastMessageBorderColor(rest.type),
+      backgroundColor: '#fff',
+    }}
+    text1Style={{
+      fontFamily: global_font.PRIMARY_BOLD,
+      fontWeight: 'normal',
+      color: '#000',
+    }}
+    text2Style={{
+      fontFamily: global_font.PRIMARY_BOLD,
+      fontWeight: 'normal',
+      color: '#000',
+    }}
+  />
+);
+
+export const toastConfig = {
+  success: baseToast,
+  error: baseToast,
+  info: baseToast,
+};
+//* End React Native Toast

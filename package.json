@@ -1,40 +1,53 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "ashpazyar",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "lint": "eslint .",
+    "start": "react-native start",
+    "test": "jest"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.13.0",
-    "@react-native-community/masked-view": "0.1.10",
-    "@react-navigation/drawer": "^5.12.5",
-    "@react-navigation/native": "^5.9.4",
-    "@react-navigation/stack": "^5.14.4",
-    "expo": "^41.0.1",
-    "expo-app-loading": "^1.0.3",
-    "expo-font": "~9.1.0",
-    "expo-sqlite": "~9.1.0",
-    "expo-status-bar": "~1.0.4",
+    "@react-native-async-storage/async-storage": "^1.18.1",
+    "@react-navigation/drawer": "^6.6.2",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/stack": "^6.3.16",
     "lodash": "^4.17.21",
-    "native-base": "^2.15.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "native-base": "^3.4.28",
+    "react": "18.2.0",
+    "react-native": "0.71.7",
     "react-native-animated-splash-screen": "^2.0.5",
-    "react-native-gesture-handler": "~1.10.2",
-    "react-native-reanimated": "~2.1.0",
-    "react-native-responsive-fontsize": "^0.5.0",
-    "react-native-safe-area-context": "3.2.0",
-    "react-native-screens": "~3.0.0",
-    "react-native-tiny-toast": "^1.0.7",
+    "react-native-gesture-handler": "^2.9.0",
+    "react-native-modal-selector": "^2.1.2",
+    "react-native-reanimated": "^3.1.0",
+    "react-native-responsive-fontsize": "^0.5.1",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "^3.20.0",
+    "react-native-svg": "12.1.1",
+    "react-native-toast-message": "^2.1.6",
     "react-native-uuid": "^2.0.1",
-    "react-native-web": "~0.13.12"
+    "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0"
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^29.2.1",
+    "@types/react": "^18.0.24",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.2.1",
+    "eslint": "^8.19.0",
+    "jest": "^29.2.1",
+    "metro-react-native-babel-preset": "0.73.9",
+    "prettier": "^2.4.1",
+    "react-test-renderer": "18.2.0",
+    "typescript": "4.8.4"
   },
-  "private": true
+  "jest": {
+    "preset": "react-native"
+  }
 }

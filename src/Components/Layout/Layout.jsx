@@ -1,4 +1,4 @@
-import React from "react";
+import Entypo from 'react-native-vector-icons/Entypo';
 import {
   Body,
   Container,
@@ -9,16 +9,17 @@ import {
   Right,
   Title,
   View,
-} from "native-base";
-import { Entypo } from "@expo/vector-icons";
+} from 'native-base';
+import {StyleSheet} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-import { chefStyles } from "../../assets/style/style";
+const Layout = ({title, right, children, footer}) => {
+  const navigation = useNavigation();
 
-const Layout = ({ title, right, children, footer, navigation }) => {
   return (
     <Container>
       <Header>
-        <Left style={{ marginLeft: 15 }}>
+        <Left style={{marginLeft: 15}}>
           <Entypo
             name="menu"
             size={24}
@@ -29,16 +30,20 @@ const Layout = ({ title, right, children, footer, navigation }) => {
         <Body>
           <Title>{title}</Title>
         </Body>
-        <Right style={{ marginRight: 15 }}>{right}</Right>
+        <Right style={{marginRight: 15}}>{right}</Right>
       </Header>
-      <View style={chefStyles.layoutBody}>{children}</View>
-      {footer ? (
+      <View style={styles.body}>{children}</View>
+      {footer && (
         <Footer>
           <FooterTab>{footer}</FooterTab>
         </Footer>
-      ) : null}
+      )}
     </Container>
   );
 };
 
 export default Layout;
+
+const styles = StyleSheet.create({
+  body: {flex: 1, padding: 20, backgroundColor: '#eee'},
+});

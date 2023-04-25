@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/IRANSans.ttf",
+      "sha1": "ff45247bdc23e390e8f70f1f800c4a4e93981d28"
+    },
+    {
+      "path": "src/assets/fonts/IRANSansBold.ttf",
+      "sha1": "31c8510f528ab0843339f19fb8429d8f210ecca0"
+    }
+  ]
+}
