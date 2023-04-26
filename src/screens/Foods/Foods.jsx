@@ -30,6 +30,7 @@ const Foods = () => {
   const [foodName, setFoodName] = useState('');
   const [isShowMenu, setIsShowMenu] = useState(false);
 
+  // Handle Get Foods Method
   const handleGetFoods = async () => {
     let foodsList = await getLocalStorage('Foods');
     if (foodsList) {
@@ -53,6 +54,7 @@ const Foods = () => {
     });
   }, []);
 
+  // Handle Add Food Method
   const handleAddFood = () => {
     if (foodName.length >= 2) {
       const food = {
@@ -66,6 +68,7 @@ const Foods = () => {
     } else toastErrorMessage('نام غذا باید حداقل از 2 کاراکتر بیشتر باشد');
   };
 
+  // Handle Delete Food Method
   const handleDeleteFood = id => {
     const foodsArray = [...foods];
     const filterFoods = foodsArray.filter(food => food._id !== id);
@@ -74,6 +77,7 @@ const Foods = () => {
     handleGetFoods();
   };
 
+  // Handle Edit Food Method
   const handleEditFood = (id, foodName, successFunc) => {
     if (foodName.length < 2)
       return toastErrorMessage('نام غذا باید حداقل از 2 کاراکتر بیشتر باشد');

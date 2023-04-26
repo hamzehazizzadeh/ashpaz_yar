@@ -19,7 +19,7 @@ const SplashScreen = ({children}) => {
       logoWidth={Dimensions.get('window').width - 150}
       translucent={true}
       isLoaded={isLoading}
-      backgroundColor={global_color.GRAY}
+      backgroundColor={global_color.LIGHT_GRAY}
       logoHeight={Dimensions.get('window').height}>
       {children}
     </AnimatedSplash>

@@ -21,7 +21,7 @@ const StuffsItem = ({
   const [isDeleted, setIsDeleted] = useState(false);
   const [stuffName, setStuffName] = useState('');
   const [stuffCount, setStuffCount] = useState('');
-  const [stuffType, setStuffType] = useState('');
+  const [stuffType, setStuffType] = useState('g');
 
   return (
     <Card style={{marginBottom: 5}}>

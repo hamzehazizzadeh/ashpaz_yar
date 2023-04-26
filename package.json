@@ -1,6 +1,6 @@
 {
-  "name": "ashpazYar",
-  "version": "0.0.1",
+  "name": "ashpazyar",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -45,5 +45,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "author": "Hamzeh Azizzadeh"
 }

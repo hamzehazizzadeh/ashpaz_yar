@@ -32,7 +32,7 @@ const Food = ({route}) => {
   const [stuffs, setStuffs] = useState([]);
   const [stuffName, setStuffName] = useState('');
   const [stuffCount, setStuffCount] = useState('');
-  const [stuffType, setStuffType] = useState('');
+  const [stuffType, setStuffType] = useState('g');
   const [numberOfPersons, setNumberOfPersons] = useState('1');
 
   const handleGetStuffs = async () => {
@@ -67,16 +67,19 @@ const Food = ({route}) => {
     });
   }, []);
 
+  // Handle Reset State Method
   const handleResetState = () => {
     setStuffName('');
     setStuffCount('');
     setStuffType('g');
   };
 
+  // Handle Add Stuffs Method
   const handleAddStuffs = () => {
-    if (!stuffName || !stuffCount || !stuffType) {
-      return;
-    }
+    if (stuffName.length < 2)
+      return toastErrorMessage('نام مواد باید حداقل از 2 کاراکتر بیشتر باشد');
+    if (!stuffCount) return toastErrorMessage('مقدار مواد نمی تواند خالی باشد');
+    if (!stuffType) return toastErrorMessage('نوع مواد نمی تواند خالی باشد');
 
     const stuff = {
       _id: uuid.v4(),
@@ -90,6 +93,7 @@ const Food = ({route}) => {
     handleResetState();
   };
 
+  // Handle Delete Stuffs Method
   const handleDeleteStuffs = id => {
     const stuffsArray = [...stuffs];
     const filterStuffs = stuffsArray.filter(stuff => stuff._id !== id);
@@ -97,6 +101,7 @@ const Food = ({route}) => {
     handleGetStuffs();
   };
 
+  // Handle Edit Stuffs Method
   const handleEditStuffs = (_stuff, successFunc) => {
     if (_stuff.name.length < 2)
       return toastErrorMessage('نام مواد باید حداقل از 2 کاراکتر بیشتر باشد');
@@ -122,6 +127,7 @@ const Food = ({route}) => {
     }
   };
 
+  // Share Food Method
   const shareFood = async () => {
     let stuffList = '';
     stuffs?.map(
@@ -201,7 +207,10 @@ const Food = ({route}) => {
                 onChangeText={val => setNumberOfPersons(val ? val : '1')}
               />
             </Card>
-            <HorizontalRule style={{marginBottom: 10}} color={global_color.MUTE} />
+            <HorizontalRule
+              style={{marginBottom: 10}}
+              color={global_color.MUTE}
+            />
             {stuffs.map(_item => (
               <StuffsItem
                 key={_item._id}
