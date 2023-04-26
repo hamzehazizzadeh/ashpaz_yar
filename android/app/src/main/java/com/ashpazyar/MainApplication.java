@@ -9,7 +9,6 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
 import java.util.List;
-import com.facebook.react.modules.i18nmanager.I18nUtil;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -59,9 +58,5 @@ public class MainApplication extends Application implements ReactApplication {
       DefaultNewArchitectureEntryPoint.load();
     }
     ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
-    // Force the app not to change on device locale change
-    I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance();
-    sharedI18nUtilInstance.forceRTL(this,true);
-    sharedI18nUtilInstance.allowRTL(this, true);
   }
 }

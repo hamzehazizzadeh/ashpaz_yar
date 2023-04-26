@@ -1,6 +1,6 @@
 import Toast, {BaseToast} from 'react-native-toast-message';
 
-import {global_font} from '../../assets/styles/style';
+import {global_color, global_font} from '../../assets/styles/style';
 
 export const toastSuccessMessage = (title, message) => {
   Toast.show({
@@ -46,17 +46,17 @@ const baseToast = ({...rest}) => (
     {...rest}
     style={{
       borderLeftColor: toastMessageBorderColor(rest.type),
-      backgroundColor: '#fff',
+      backgroundColor: global_color.WHITE,
     }}
     text1Style={{
       fontFamily: global_font.PRIMARY_BOLD,
       fontWeight: 'normal',
-      color: '#000',
+      color: global_color.BLACK,
     }}
     text2Style={{
       fontFamily: global_font.PRIMARY_BOLD,
       fontWeight: 'normal',
-      color: '#000',
+      color: global_color.BLACK,
     }}
   />
 );

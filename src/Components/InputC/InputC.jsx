@@ -1,7 +1,7 @@
 import {Pressable, StyleSheet, TextInput, View} from 'react-native';
 
 import TextC from '../TextC/TextC';
-import {primaryStyles} from '../../assets/styles/style';
+import {global_color, primaryStyles} from '../../assets/styles/style';
 
 const InputC = ({
   label,
@@ -10,10 +10,10 @@ const InputC = ({
   containerStyle = {},
   labelStyle = {},
   inputStyle = {},
-  size = 'md',
+  size = 'sm',
   errorMessage,
   onPress,
-  placeholderTextColor = '#a3a4a6',
+  placeholderTextColor = global_color.MUTE,
   ...otherProps
 }) => {
   const paddingVertical =
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   readOnly: {
-    backgroundColor: '#e6e6e6',
-    color: '#808080',
+    backgroundColor: global_color.LIGHT_GRAY,
+    color: global_color.GRAY,
   },
 });

@@ -1,13 +1,15 @@
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useState} from 'react';
-import {Button, Card, CardItem, View} from 'native-base';
-import {Pressable} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {RFPercentage} from 'react-native-responsive-fontsize';
 
 import TextC from '../TextC/TextC';
 import AlertC from '../AlertC/AlertC';
 import InputC from './../InputC/InputC';
-import {primaryStyles} from '../../assets/styles/style';
-import {stuffsForPersons, numberSeparate} from '../../utils';
+import Select from '../Select/Select';
+import ButtonC from './../ButtonC/ButtonC';
+import Card from './../Card/Card';
+import {stuffsForPersons, numberSeparate, stuffTypes} from '../../utils';
 
 const StuffsItem = ({
   stuff,
@@ -17,129 +19,162 @@ const StuffsItem = ({
 }) => {
   const [isEdited, setIsEdited] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
-  const [stuffsName, setStuffsName] = useState('');
+  const [stuffName, setStuffName] = useState('');
   const [stuffCount, setStuffCount] = useState('');
+  const [stuffType, setStuffType] = useState('');
 
   return (
-    <Card>
-      <CardItem style={primaryStyles.foodItem}>
-        <View style={{width: '80%'}}>
-          <TextC>{stuff.name}</TextC>
+    <Card style={{marginBottom: 5}}>
+      <View style={styles.item}>
+        <View style={{flex: 1}}>
+          <TextC align="left" bold>
+            {stuff.name}
+          </TextC>
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Pressable
+        <View style={styles.row}>
+          <FontAwesome
             onPress={() => {
               setIsEdited(!isEdited);
-              setStuffsName(stuff?.name);
+              setStuffName(stuff?.name);
               setStuffCount(stuff?.count);
-            }}>
-            <FontAwesome name="edit" size={30} color="blue" />
-          </Pressable>
-          <Pressable
-            style={{marginLeft: 10}}
-            onPress={() => setIsDeleted(!isDeleted)}>
-            <FontAwesome name="trash" size={30} color="red" />
-          </Pressable>
-        </View>
-      </CardItem>
-      <CardItem>
-        <View style={{width: '100%'}}>
-          <AlertC
-            fontSize={1.6}
-            message={`به ازای ${numberSeparate(
-              numberOfPersons,
-            )} نفر ${stuffsForPersons(
-              stuff?.count,
-              numberOfPersons,
-              stuff?.type,
-            )}`}
+              setStuffType(stuff?.type);
+            }}
+            name="edit"
+            size={RFPercentage(3)}
+            color="blue"
+          />
+          <FontAwesome
+            onPress={() => setIsDeleted(!isDeleted)}
+            name="trash"
+            style={{marginLeft: 15}}
+            size={RFPercentage(3)}
+            color="red"
           />
         </View>
-      </CardItem>
+      </View>
+      <View style={styles.mt}>
+        <AlertC
+          fontSize={1.6}
+          message={`به ازای ${numberSeparate(
+            numberOfPersons,
+          )} نفر ${stuffsForPersons(
+            stuff?.count,
+            numberOfPersons,
+            stuff?.type,
+          )}`}
+        />
+      </View>
+      {/* Edit Section */}
       {isEdited && (
-        <CardItem>
-          <View style={{width: '100%'}}>
-            <View>
-              <InputC
-                value={stuffsName}
-                placeholder="نام مواد"
-                onChangeText={name => setStuffsName(name)}
-              />
-            </View>
-            <View style={{marginTop: 10}}>
+        <View style={styles.mt}>
+          <InputC
+            value={stuffName}
+            label="نام"
+            placeholder="برای مثال: گوشت"
+            onChangeText={name => setStuffName(name)}
+          />
+          <View style={styles.row}>
+            <View style={styles.itemRight}>
               <InputC
                 value={stuffCount}
                 keyboardType="numeric"
-                placeholder="مقدار مواد"
+                label="مقدار"
+                placeholder="برای مثال: 2"
                 onChangeText={count => setStuffCount(count)}
               />
             </View>
-            <View style={primaryStyles.multiButton}>
-              <View style={{width: '65%'}}>
-                <Button
-                  primary
-                  full
-                  onPress={() =>
-                    handleEditStuffs(stuff._id, stuffsName, stuffCount, () => {
-                      setIsEdited(false);
-                    })
-                  }
-                  style={primaryStyles.roundedButton}>
-                  <TextC color="#fff">ویرایش</TextC>
-                </Button>
-              </View>
-              <View style={{width: '30%'}}>
-                <Button
-                  danger
-                  full
-                  onPress={() => setIsEdited(false)}
-                  style={primaryStyles.roundedButton}>
-                  <TextC color="#fff">انصراف</TextC>
-                </Button>
-              </View>
-            </View>
-          </View>
-        </CardItem>
-      )}
-      {isDeleted && (
-        <CardItem>
-          <View style={{width: '100%'}}>
-            <View>
-              <AlertC
-                backgroundColor="#0dcaf0"
-                message={`آیا از حذف ${stuff?.name} مطمئنید؟`}
+            <View style={styles.itemLeft}>
+              <Select
+                label="نوع مقدار"
+                initValue={
+                  stuffTypes?.find(_p => _p?.key == stuffType)?.label ??
+                  'برای مثال: گرم'
+                }
+                onChange={val => setStuffType(val.key)}
+                data={stuffTypes}
               />
             </View>
-            <View style={primaryStyles.multiButton}>
-              <View style={{width: '65%'}}>
-                <Button
-                  danger
-                  full
-                  onPress={() => handleDelete(stuff._id)}
-                  style={primaryStyles.roundedButton}>
-                  <TextC color="#fff">بله حذف</TextC>
-                </Button>
-              </View>
-              <View style={{width: '30%'}}>
-                <Button
-                  primary
-                  full
-                  onPress={() => setIsDeleted(false)}
-                  style={primaryStyles.roundedButton}>
-                  <TextC color="#fff">خیر</TextC>
-                </Button>
-              </View>
+          </View>
+          <View style={[styles.buttonsContainer]}>
+            <View style={styles.confirmButton}>
+              <ButtonC
+                variant="primary"
+                onPress={() =>
+                  handleEditStuffs(
+                    {
+                      id: stuff._id,
+                      name: stuffName,
+                      count: stuffCount,
+                      type: stuffType,
+                    },
+                    () => {
+                      setIsEdited(false);
+                    },
+                  )
+                }>
+                ویرایش
+              </ButtonC>
+            </View>
+            <View style={styles.cancelButton}>
+              <ButtonC variant="danger" onPress={() => setIsEdited(false)}>
+                انصراف
+              </ButtonC>
             </View>
           </View>
-        </CardItem>
+        </View>
+      )}
+      {/* Delete Section */}
+      {isDeleted && (
+        <View style={styles.mt}>
+          <View>
+            <AlertC
+              backgroundColor="info"
+              message={`آیا از حذف ${stuff?.name} مطمئنید؟`}
+            />
+          </View>
+          <View style={[styles.buttonsContainer]}>
+            <View style={styles.confirmButton}>
+              <ButtonC variant="danger" onPress={() => handleDelete(stuff._id)}>
+                بله حذف
+              </ButtonC>
+            </View>
+            <View style={styles.cancelButton}>
+              <ButtonC variant="primary" onPress={() => setIsDeleted(false)}>
+                خیر
+              </ButtonC>
+            </View>
+          </View>
+        </View>
       )}
     </Card>
   );
 };
 
 export default StuffsItem;
+
+const styles = StyleSheet.create({
+  item: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  itemRight: {flex: 1, marginRight: 10},
+  itemLeft: {flex: 1, marginLeft: 10},
+  buttonsContainer: {
+    flexDirection: 'row',
+    marginTop: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  mt: {
+    marginTop: 15,
+  },
+  confirmButton: {flex: 3},
+  cancelButton: {flex: 1, marginLeft: 10},
+});

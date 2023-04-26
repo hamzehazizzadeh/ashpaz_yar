@@ -1,22 +1,23 @@
 import {View, StyleSheet} from 'react-native';
 
 import TextC from './../TextC/TextC';
+import {convertColorText} from '../../utils';
 
 const AlertC = ({
-  backgroundColor = '#23366b',
-  color = '#fff',
+  backgroundColor = 'dark-blue',
+  color = 'white',
   message,
-  fontSize = 11,
+  fontSize = 1.8,
 }) => {
   return (
     <View
       style={[
         styles.container,
         {
-          backgroundColor,
+          backgroundColor: convertColorText(backgroundColor),
         },
       ]}>
-      <TextC size={fontSize} color={color}>
+      <TextC bold size={fontSize} color={color}>
         {message}
       </TextC>
     </View>

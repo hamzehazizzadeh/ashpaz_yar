@@ -1,53 +1,50 @@
 import {StyleSheet} from 'react-native';
+import {RFPercentage} from 'react-native-responsive-fontsize';
 
 export const global_font = {PRIMARY: 'IRANSans', PRIMARY_BOLD: 'IRANSansBold'};
+
+export const global_color = {
+  PRIMARY: '#3f5ab0',
+  PRIMARY_LIGHT: '#3f5ab033',
+  INFO: '#28c3d7',
+  INFO_LIGHT: '#dff6f9',
+  BLUE: '#00a2c7',
+  DARK_BLUE: '#23366b',
+  DARK_GREEN: '#117577',
+  SUCCESS: '#02BC77',
+  SUCCESS_LIGHT: '#e1fae2',
+  INFO_LIGHT: '#f1faff',
+  DANGER: '#d9534f',
+  DANGER_LIGHT: '#fdefef',
+  LIGHT: '#181c211a',
+  LIGHT_GRAY: '#e6e6e6',
+  WHITE: '#ffffff',
+  WARNING: '#FFD950',
+  BLACK: '#000000',
+  GRAY: '#808080',
+  MUTE: '#a3a4a6',
+  SECONDARY: '#8897AA',
+};
 
 export const primaryStyles = StyleSheet.create({
   inputContainer: {
     fontFamily: global_font.PRIMARY,
     width: '100%',
-    borderColor: '#ccc',
+    borderColor: global_color.MUTE,
     borderWidth: 1,
     paddingHorizontal: 15,
     paddingVertical: 5,
-    borderRadius: 7,
+    borderRadius: 5,
     textAlign: 'right',
-    color: '#3f51b5',
-    backgroundColor: '#fff',
+    color: global_color.PRIMARY,
+    backgroundColor: global_color.WHITE,
   },
-  modalBody: {
-    padding: 20,
+  stackHeaderTitle: {
+    fontFamily: global_font.PRIMARY_BOLD,
+    fontSize: RFPercentage(2.5),
+    color: global_color.WHITE,
   },
-  modalHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    alignItems: 'center',
-    borderBottomColor: '#000',
-    borderBottomWidth: 1.5,
-    backgroundColor: '#eee',
-  },
-  roundedButton: {
-    borderRadius: 7,
-  },
-  layoutBody: {flex: 1, padding: 20, backgroundColor: '#eee'},
-  foodItem: {
-    flexDirection: 'row',
-    flex: 1,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  addedSection: {
-    marginBottom: 10,
-    borderBottomColor: '#000',
-    borderBottomWidth: 1,
-    paddingBottom: 10,
-  },
-  multiButton: {
-    flexDirection: 'row',
-    marginTop: 10,
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  stackHeader: {
+    backgroundColor: global_color.PRIMARY,
   },
 });

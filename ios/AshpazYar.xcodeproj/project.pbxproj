@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AshpazYarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AshpazYarTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-AshpazYar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-AshpazYar.a */; };
+		00E356F31AD99517003FC87E /* ashpazYarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ashpazYarTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-ashpazYar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ashpazYar.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-AshpazYar-AshpazYarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AshpazYar-AshpazYarTests.a */; };
+		7699B88040F8A987B510C191 /* libPods-ashpazYar-ashpazYarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ashpazYar-ashpazYarTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		34E055F21C87410CAB142AC3 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41BFF774B6C6417A800362DB /* IRANSans.ttf */; };
-		65A7CD1D9AC849AD8304D18D /* IRANSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9E3A369ADE049D0915D03F3 /* IRANSansBold.ttf */; };
+		51540ABF710E402099126E49 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC6E6B4B25D1400D9C9599C0 /* IRANSans.ttf */; };
+		E62F9F91AD764AE2B81560FD /* IRANSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FBA2AE4B3D5481F94F85AC4 /* IRANSansBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,30 +24,30 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AshpazYar;
+			remoteInfo = ashpazYar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* AshpazYarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AshpazYarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ashpazYarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ashpazYarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AshpazYarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AshpazYarTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* AshpazYar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshpazYar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AshpazYar/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = AshpazYar/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AshpazYar/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AshpazYar/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AshpazYar/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-AshpazYar-AshpazYarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AshpazYar-AshpazYarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-AshpazYar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AshpazYar.debug.xcconfig"; path = "Target Support Files/Pods-AshpazYar/Pods-AshpazYar.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-AshpazYar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AshpazYar.release.xcconfig"; path = "Target Support Files/Pods-AshpazYar/Pods-AshpazYar.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-AshpazYar-AshpazYarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AshpazYar-AshpazYarTests.debug.xcconfig"; path = "Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-AshpazYar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AshpazYar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AshpazYar/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-AshpazYar-AshpazYarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AshpazYar-AshpazYarTests.release.xcconfig"; path = "Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests.release.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ashpazYarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ashpazYarTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ashpazYar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ashpazYar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ashpazYar/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ashpazYar/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ashpazYar/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ashpazYar/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ashpazYar/main.m; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ashpazYar-ashpazYarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ashpazYar-ashpazYarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-ashpazYar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ashpazYar.debug.xcconfig"; path = "Target Support Files/Pods-ashpazYar/Pods-ashpazYar.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-ashpazYar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ashpazYar.release.xcconfig"; path = "Target Support Files/Pods-ashpazYar/Pods-ashpazYar.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-ashpazYar-ashpazYarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ashpazYar-ashpazYarTests.debug.xcconfig"; path = "Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-ashpazYar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ashpazYar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ashpazYar/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-ashpazYar-ashpazYarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ashpazYar-ashpazYarTests.release.xcconfig"; path = "Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		41BFF774B6C6417A800362DB /* IRANSans.ttf */ = {isa = PBXFileReference; name = "IRANSans.ttf"; path = "../src/assets/fonts/IRANSans.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A9E3A369ADE049D0915D03F3 /* IRANSansBold.ttf */ = {isa = PBXFileReference; name = "IRANSansBold.ttf"; path = "../src/assets/fonts/IRANSansBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DC6E6B4B25D1400D9C9599C0 /* IRANSans.ttf */ = {isa = PBXFileReference; name = "IRANSans.ttf"; path = "../src/assets/fonts/IRANSans.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4FBA2AE4B3D5481F94F85AC4 /* IRANSansBold.ttf */ = {isa = PBXFileReference; name = "IRANSansBold.ttf"; path = "../src/assets/fonts/IRANSansBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-AshpazYar-AshpazYarTests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-ashpazYar-ashpazYarTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,20 +63,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-AshpazYar.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-ashpazYar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AshpazYarTests */ = {
+		00E356EF1AD99517003FC87E /* ashpazYarTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AshpazYarTests.m */,
+				00E356F21AD99517003FC87E /* ashpazYarTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AshpazYarTests;
+			path = ashpazYarTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -87,7 +87,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* AshpazYar */ = {
+		13B07FAE1A68108700A75B9A /* ashpazYar */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -97,15 +97,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = AshpazYar;
+			name = ashpazYar;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-AshpazYar.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-AshpazYar-AshpazYarTests.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-ashpazYar.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-ashpazYar-ashpazYarTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,13 +120,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* AshpazYar */,
+				13B07FAE1A68108700A75B9A /* ashpazYar */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AshpazYarTests */,
+				00E356EF1AD99517003FC87E /* ashpazYarTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				C0650E3E19E74AE7802731BA /* Resources */,
+				D076C0ACAE29429ABF7721CE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* AshpazYar.app */,
-				00E356EE1AD99517003FC87E /* AshpazYarTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ashpazYar.app */,
+				00E356EE1AD99517003FC87E /* ashpazYarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,19 +145,19 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-AshpazYar.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-AshpazYar.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-AshpazYar-AshpazYarTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-AshpazYar-AshpazYarTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-ashpazYar.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-ashpazYar.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-ashpazYar-ashpazYarTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-ashpazYar-ashpazYarTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C0650E3E19E74AE7802731BA /* Resources */ = {
+		D076C0ACAE29429ABF7721CE /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				41BFF774B6C6417A800362DB /* IRANSans.ttf */,
-				A9E3A369ADE049D0915D03F3 /* IRANSansBold.ttf */,
+				DC6E6B4B25D1400D9C9599C0 /* IRANSans.ttf */,
+				4FBA2AE4B3D5481F94F85AC4 /* IRANSansBold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -166,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AshpazYarTests */ = {
+		00E356ED1AD99517003FC87E /* ashpazYarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AshpazYarTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ashpazYarTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -182,14 +182,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AshpazYarTests;
-			productName = AshpazYarTests;
-			productReference = 00E356EE1AD99517003FC87E /* AshpazYarTests.xctest */;
+			name = ashpazYarTests;
+			productName = ashpazYarTests;
+			productReference = 00E356EE1AD99517003FC87E /* ashpazYarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* AshpazYar */ = {
+		13B07F861A680F5B00A75B9A /* ashpazYar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AshpazYar" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ashpazYar" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -204,9 +204,9 @@
 			);
 			dependencies = (
 			);
-			name = AshpazYar;
-			productName = AshpazYar;
-			productReference = 13B07F961A680F5B00A75B9A /* AshpazYar.app */;
+			name = ashpazYar;
+			productName = ashpazYar;
+			productReference = 13B07F961A680F5B00A75B9A /* ashpazYar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AshpazYar" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ashpazYar" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -239,8 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* AshpazYar */,
-				00E356ED1AD99517003FC87E /* AshpazYarTests */,
+				13B07F861A680F5B00A75B9A /* ashpazYar */,
+				00E356ED1AD99517003FC87E /* ashpazYarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,8 +259,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				34E055F21C87410CAB142AC3 /* IRANSans.ttf in Resources */,
-				65A7CD1D9AC849AD8304D18D /* IRANSansBold.ttf in Resources */,
+				51540ABF710E402099126E49 /* IRANSans.ttf in Resources */,
+				E62F9F91AD764AE2B81560FD /* IRANSansBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,15 +289,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar/Pods-AshpazYar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar/Pods-ashpazYar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar/Pods-AshpazYar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar/Pods-ashpazYar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AshpazYar/Pods-AshpazYar-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ashpazYar/Pods-ashpazYar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -315,7 +315,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AshpazYar-AshpazYarTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ashpazYar-ashpazYarTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -337,7 +337,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AshpazYar-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ashpazYar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -350,15 +350,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -367,15 +367,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar/Pods-AshpazYar-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar/Pods-ashpazYar-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar/Pods-AshpazYar-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar/Pods-ashpazYar-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AshpazYar/Pods-AshpazYar-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ashpazYar/Pods-ashpazYar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -384,15 +384,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AshpazYar-AshpazYarTests/Pods-AshpazYar-AshpazYarTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ashpazYar-ashpazYarTests/Pods-ashpazYar-ashpazYarTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -421,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AshpazYarTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ashpazYarTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +439,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AshpazYar */;
+			target = 13B07F861A680F5B00A75B9A /* ashpazYar */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -447,14 +447,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-AshpazYar-AshpazYarTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ashpazYar-ashpazYarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AshpazYarTests/Info.plist;
+				INFOPLIST_FILE = ashpazYarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,17 +468,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AshpazYar.app/AshpazYar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ashpazYar.app/ashpazYar";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-AshpazYar-AshpazYarTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ashpazYar-ashpazYarTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = AshpazYarTests/Info.plist;
+				INFOPLIST_FILE = ashpazYarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,19 +492,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AshpazYar.app/AshpazYar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ashpazYar.app/ashpazYar";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-AshpazYar.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ashpazYar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = AshpazYar/Info.plist;
+				INFOPLIST_FILE = ashpazYar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +516,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AshpazYar;
+				PRODUCT_NAME = ashpazYar;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -525,12 +525,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-AshpazYar.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ashpazYar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = AshpazYar/Info.plist;
+				INFOPLIST_FILE = ashpazYar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,7 +542,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AshpazYar;
+				PRODUCT_NAME = ashpazYar;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -686,7 +686,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AshpazYarTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ashpazYarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AshpazYar" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ashpazYar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -704,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AshpazYar" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ashpazYar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

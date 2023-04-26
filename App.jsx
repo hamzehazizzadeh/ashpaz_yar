@@ -1,7 +1,5 @@
-import React from 'react';
 import Toast from 'react-native-toast-message';
 import {I18nManager, StatusBar} from 'react-native';
-import {NativeBaseProvider} from 'native-base';
 
 import Container from './src/containers';
 import {toastConfig} from './src/utils/toastMessage/toastMessage';
@@ -15,13 +13,14 @@ const App = () => {
   useDoubleBackPressExit();
 
   return (
-    <NativeBaseProvider>
+    <>
       <StatusBar hidden />
+
       <Container />
 
       {/* React Native Toast Message */}
       <Toast position="bottom" config={toastConfig} />
-    </NativeBaseProvider>
+    </>
   );
 };
 

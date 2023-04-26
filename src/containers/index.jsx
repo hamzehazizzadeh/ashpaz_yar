@@ -1,60 +1,34 @@
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItem,
-  DrawerItemList,
-} from '@react-navigation/drawer';
-import {Linking} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-import StackNavigator from './StackNavigator/StackNavigator';
+import SplashScreen from './../components/SplashScreen/SplashScreen';
+import Foods from './../screens/Foods/Foods';
+import Food from './../screens/Food/Food';
+import {primaryStyles} from './../assets/styles/style';
 
-const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 const Container = () => {
+  const screenOptions = {
+    headerShown: true,
+    headerTitleStyle: primaryStyles.stackHeaderTitle,
+    headerStyle: primaryStyles.stackHeader,
+  };
+
   return (
     <SplashScreen>
       <NavigationContainer>
-        <Drawer.Navigator
-          drawerContent={props => <CustomDrawerContent {...props} />}
-          drawerContentOptions={{
-            labelStyle: {
-              fontFamily: defaultFontFamily,
-            },
-          }}>
-          <Drawer.Screen
-            name="Home"
-            options={{drawerLabel: 'لیست غذا'}}
-            component={StackNavigator}
+        <Stack.Navigator screenOptions={screenOptions} initialRouteName="Foods">
+          <Stack.Screen
+            name="Foods"
+            options={{title: 'آشپزیار'}}
+            component={Foods}
           />
-        </Drawer.Navigator>
+          <Stack.Screen name="Food" component={Food} />
+        </Stack.Navigator>
       </NavigationContainer>
     </SplashScreen>
   );
 };
 
 export default Container;
-
-const CustomDrawerContent = props => {
-  return (
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-      <DrawerItem
-        labelStyle={{fontFamily: defaultFontFamily}}
-        label="درباره سازنده"
-        onPress={() => Linking.openURL('https://hamzehazizzadeh.ir')}
-      />
-      <DrawerItem
-        labelStyle={{fontFamily: defaultFontFamily}}
-        label="پشتیبانی تلگرام"
-        onPress={() => Linking.openURL('tg://resolve?domain=hamzeh_azizzadeh')}
-      />
-      <DrawerItem
-        labelStyle={{fontFamily: defaultFontFamily}}
-        label="مشارکت در توسعه"
-        onPress={() =>
-          Linking.openURL('https://github.com/hamzehazizzadeh/ashpaz_yar')
-        }
-      />
-    </DrawerContentScrollView>
-  );
-};

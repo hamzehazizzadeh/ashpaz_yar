@@ -53,15 +53,15 @@ const styles = StyleSheet.create({
   label: {
     marginBottom: 3,
   },
-  readOnly: {backgroundColor: "#181c211a"},
+  readOnly: {backgroundColor: global_color.LIGHT},
   text: {
     fontFamily: global_font.PRIMARY,
-    color: '#000',
+    color: global_color.BLACK,
     fontSize: RFValue(11),
   },
   optionTextStyle: {
     fontFamily: global_font.PRIMARY,
-    color: '#000',
+    color: global_color.BLACK,
   },
-  optionContainerStyle: {backgroundColor: '#fff'},
+  optionContainerStyle: {backgroundColor: global_color.WHITE},
 });
