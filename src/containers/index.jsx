@@ -42,32 +42,36 @@ const Container = () => {
 
   return (
     <SplashScreen>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={screenOptions} initialRouteName="Foods">
-          <Stack.Screen
-            name="Foods"
-            options={{title: 'آشپزیار'}}
-            component={BottomTab}
-          />
-          <Stack.Screen name="Food" component={Food} />
-          <Stack.Screen
-            name="SubCategories"
-            initialParams={{categoryId: ''}}
-            component={Categories}
-          />
-          <Stack.Screen
-            name="Recipes"
-            initialParams={{subCategoryId: ''}}
-            component={Recipes}
-          />
-          <Stack.Screen
-            name="Recipe"
-            initialParams={{id: ''}}
-            component={Recipe}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-      <Menu isShowMenu={isShowMenu} setIsShowMenu={setIsShowMenu} />
+      <>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={screenOptions}
+            initialRouteName="Foods">
+            <Stack.Screen
+              name="Foods"
+              options={{title: 'آشپزیار'}}
+              component={BottomTab}
+            />
+            <Stack.Screen name="Food" component={Food} />
+            <Stack.Screen
+              name="SubCategories"
+              initialParams={{categoryId: ''}}
+              component={Categories}
+            />
+            <Stack.Screen
+              name="Recipes"
+              initialParams={{subCategoryId: ''}}
+              component={Recipes}
+            />
+            <Stack.Screen
+              name="Recipe"
+              initialParams={{id: ''}}
+              component={Recipe}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+        <Menu isShowMenu={isShowMenu} setIsShowMenu={setIsShowMenu} />
+      </>
     </SplashScreen>
   );
 };
@@ -102,7 +106,11 @@ const BottomTab = () => {
         options={{
           tabBarLabel: 'دستورات آشپزی',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="chef-hat" color={color} size={size - 2} />
+            <MaterialCommunityIcons
+              name="chef-hat"
+              color={color}
+              size={size - 2}
+            />
           ),
         }}
         component={Categories}
