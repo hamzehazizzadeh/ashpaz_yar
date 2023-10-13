@@ -1,19 +1,12 @@
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Entypo from 'react-native-vector-icons/Entypo';
 import uuid from 'react-native-uuid';
 import {useEffect, useState} from 'react';
-import {FlatList, StyleSheet, View, Linking, Pressable} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {isEmpty} from 'lodash';
-import {useNavigation} from '@react-navigation/native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 
 import ButtonC from './../../components/ButtonC/ButtonC';
 import Layout from '../../components/Layout/Layout';
 import AlertC from './../../components/AlertC/AlertC';
 import InputC from '../../components/InputC/InputC';
-import TextC from '../../components/TextC/TextC';
-import ModalC from './../../components/ModalC/ModalC';
-import HorizontalRule from './../../components/HorizontalRule/HorizontalRule';
 import FoodItem from '../../components/FoodItem/FoodItem';
 import {global_color} from '../../assets/styles/style';
 import {
@@ -24,11 +17,8 @@ import {
 import {toastErrorMessage} from '../../utils/toastMessage/toastMessage';
 
 const Foods = () => {
-  const navigation = useNavigation();
-
   const [foods, setFoods] = useState([]);
   const [foodName, setFoodName] = useState('');
-  const [isShowMenu, setIsShowMenu] = useState(false);
 
   // Handle Get Foods Method
   const handleGetFoods = async () => {
@@ -40,18 +30,6 @@ const Foods = () => {
 
   useEffect(() => {
     handleGetFoods();
-
-    navigation.setOptions({
-      headerLeft: () => (
-        <Entypo
-          name="menu"
-          style={{marginHorizontal: 15}}
-          size={RFPercentage(3.5)}
-          color="white"
-          onPress={() => setIsShowMenu(true)}
-        />
-      ),
-    });
   }, []);
 
   // Handle Add Food Method
@@ -131,90 +109,11 @@ const Foods = () => {
           )}
         />
       )}
-
-      <ModalC title="منو" show={isShowMenu} onHide={() => setIsShowMenu(false)}>
-        <MenuItem
-          icon="globe-asia"
-          onPress={() => Linking.openURL('https://hamzehazizzadeh.ir')}
-          title="درباره سازنده"
-        />
-        <HorizontalRule />
-        <MenuItem
-          icon="telegram"
-          onPress={() =>
-            Linking.openURL('tg://resolve?domain=hamzeh_azizzadeh')
-          }
-          title="پشتیبانی تلگرام"
-        />
-        <HorizontalRule />
-        <MenuItem
-          icon="github"
-          onPress={() =>
-            Linking.openURL('https://github.com/hamzehazizzadeh/ashpaz_yar')
-          }
-          title="مشارکت در توسعه"
-        />
-        <HorizontalRule />
-        <MenuItem
-          icon="phone-square"
-          onPress={() => Linking.openURL('tel:09103278696')}
-          title="تماس با سازنده"
-        />
-        <HorizontalRule />
-        <MenuItem
-          icon="sms"
-          onPress={() => Linking.openURL('sms:09103278696')}
-          title="نظرات و پیشنهادات"
-        />
-        <HorizontalRule />
-        <MenuItem
-          icon="bug"
-          onPress={() => Linking.openURL('sms:09103278696')}
-          title="گزارش مشکل"
-        />
-        <HorizontalRule />
-        <MenuItem
-          icon="donate"
-          onPress={() => Linking.openURL('https://zarinp.al/hamzehazizzadeh')}
-          title="حمایت از سازنده"
-        />
-        <TextC style={{marginTop: 50}} bold align="center">
-          توسعه یافته توسط{' '}
-          <TextC
-            color="primary"
-            bold
-            onPress={() => Linking.openURL('https://hamzehazizzadeh.ir')}>
-            حمزه عزیززاده
-          </TextC>
-        </TextC>
-      </ModalC>
     </Layout>
   );
 };
 
 export default Foods;
-
-const MenuItem = ({icon, title, onPress}) => {
-  return (
-    <Pressable onPress={onPress} style={styles.menuItem}>
-      <View style={styles.menuItem}>
-        <FontAwesome5
-          name={icon}
-          size={RFPercentage(3.5)}
-          color={global_color.BLACK}
-        />
-        <TextC style={styles.menuItemTitle}>{title}</TextC>
-      </View>
-      <View>
-        <FontAwesome5
-          name="angle-left"
-          size={RFPercentage(2.5)}
-          color={global_color.BLACK}
-        />
-      </View>
-    </Pressable>
-  );
-};
 
 const styles = StyleSheet.create({
   addSection: {
@@ -225,14 +124,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  menuItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 5,
-  },
-  menuItemTitle: {
-    marginLeft: 16,
   },
 });
