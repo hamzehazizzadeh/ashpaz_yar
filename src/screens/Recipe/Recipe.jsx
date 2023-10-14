@@ -1,13 +1,18 @@
+import Feather from 'react-native-vector-icons/Feather';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
+import {RFPercentage} from 'react-native-responsive-fontsize';
 import {Image, View, ScrollView} from 'react-native';
+import {isEmpty} from 'lodash';
 
 import Layout from '../../components/Layout/Layout';
 import LineBreak from './../../components/LineBreak/LineBreak';
 import TextC from '../../components/TextC/TextC';
 import Card from '../../components/Card/Card';
 import {getFood} from '../../utils/services';
-import {isEmpty} from 'lodash';
+import {global_color} from '../../assets/styles/style';
+import {share} from '../../utils';
 
 const Recipe = ({route}) => {
   const navigation = useNavigation();
@@ -17,11 +22,36 @@ const Recipe = ({route}) => {
   useEffect(() => {
     const data = getFood(route.params?.id);
     setFood(data);
-    navigation.setOptions({title: data?.title});
+    navigation.setOptions({
+      title: data?.title,
+      headerLeft: () => (
+        <Feather
+          name="arrow-right"
+          style={{marginHorizontal: 15}}
+          color={global_color.WHITE}
+          size={RFPercentage(3.5)}
+          onPress={() => navigation.goBack()}
+        />
+      ),
+      headerRight: () => (
+        <FontAwesome5
+          name="share-alt"
+          style={{marginHorizontal: 15}}
+          color={global_color.WHITE}
+          size={RFPercentage(3)}
+          onPress={shareFood}
+        />
+      ),
+    });
     return () => {
       setFood([]);
     };
   }, []);
+
+  // Share Food Method
+  const shareFood = async () => {
+    share(food.title, food.content);
+  };
 
   if (isEmpty(food)) return null;
   else

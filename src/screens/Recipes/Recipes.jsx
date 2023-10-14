@@ -1,12 +1,14 @@
+import Feather from 'react-native-vector-icons/Feather';
 import {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {FlatList, StyleSheet, View} from 'react-native';
+import {RFPercentage} from 'react-native-responsive-fontsize';
 
 import RecipeItem from '../../components/RecipeItem/RecipeItem';
 import Layout from '../../components/Layout/Layout';
+import InputC from '../../components/InputC/InputC';
 import {getFoods} from '../../utils/services';
 import {global_color} from '../../assets/styles/style';
-import InputC from '../../components/InputC/InputC';
 
 const Recipes = ({route}) => {
   const navigation = useNavigation();
@@ -18,7 +20,18 @@ const Recipes = ({route}) => {
     const data = getFoods(route.params?.subCategoryId);
 
     setFoods(data?.foods);
-    navigation.setOptions({title: data?.title});
+    navigation.setOptions({
+      title: data?.title,
+      headerLeft: () => (
+        <Feather
+          name="arrow-right"
+          style={{marginHorizontal: 15}}
+          color={global_color.WHITE}
+          size={RFPercentage(3.5)}
+          onPress={() => navigation.goBack()}
+        />
+      ),
+    });
 
     return () => {
       setFoods([]);
