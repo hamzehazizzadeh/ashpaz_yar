@@ -39,7 +39,7 @@ const Recipe = ({route}) => {
           style={{marginHorizontal: 15}}
           color={global_color.WHITE}
           size={RFPercentage(3)}
-          onPress={shareFood}
+          onPress={() => shareFood(data)}
         />
       ),
     });
@@ -49,8 +49,8 @@ const Recipe = ({route}) => {
   }, []);
 
   // Share Food Method
-  const shareFood = async () => {
-    share(food.title, food.content);
+  const shareFood = async (data) => {
+    share(data.title, data.content);
   };
 
   if (isEmpty(food)) return null;
