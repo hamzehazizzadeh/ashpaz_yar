@@ -44,14 +44,16 @@ const Recipe = ({route}) => {
             }}>
             <View>
               <TextC>
-                ملیت غذا: <TextC bold>{food?.city}</TextC>
-              </TextC>
-            </View>
-            <View>
-              <TextC>
                 دسته بندی: <TextC bold>{food?.category}</TextC>
               </TextC>
             </View>
+            {food?.city && (
+              <View>
+                <TextC>
+                  ملیت غذا: <TextC bold>{food?.city}</TextC>
+                </TextC>
+              </View>
+            )}
           </Card>
           <LineBreak />
           <Card>
